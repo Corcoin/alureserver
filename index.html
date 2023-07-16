@@ -126,6 +126,17 @@
             document.getElementById('shares').textContent = formattedValue;
             document.getElementById('price').textContent = '$' + aluminumPrice.toFixed(2);
         }
+        function sendEmail() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var amount = document.getElementById('amount').value;
+
+            // Send email using your preferred email sending method
+            var subject = 'Share Request';
+            var body = 'Name: ' + name + '\nEmail: ' + email + '\nAmount of Shares: ' + amount;
+            var mailtoLink = 'mailto:bwesson82@gmail.com' + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+            window.location.href = mailtoLink;
+        }
     </script>
 </head>
 <body onload="displaySharesInfo()">
