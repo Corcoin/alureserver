@@ -1,6 +1,6 @@
 # alu
 AluReserver - Digital Shares
-
+https://corcoin.github.io/alureserver/
 Welcome to Alureserver - Empowering Digital Shares
 
 At Alureserver, we are revolutionizing the world of digital shares and empowering individuals to invest in the future of aluminum. We offer a unique opportunity for investors to participate in the growth and potential of the aluminum market, backed by the solid foundation of 800 trillion digital shares.
