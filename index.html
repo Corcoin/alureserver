@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alureserver - Digital Shares</title>
+    <style>
+        
+        body {
+            
+            background-color: #181818;
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+            font-family: 'Monoton', cursive;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #121212;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        #shares, #price {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .stock-market {
+            background-color: #1f1f1f;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .stock-market span {
+            font-size: 16px;
+            color: #b3b3b3;
+        }
+
+        .stock-market .label {
+            font-weight: bold;
+        }
+
+        .stock-market .value {
+            font-size: 28px;
+            color: #fff;
+        }
+
+        .share-form {
+            margin-top: 20px;
+        }
+
+        .share-form input[type="text"],
+        .share-form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .share-form input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .share-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .ticker-wrap {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ticker-wrap::after {
+            content: attr(data-text);
+            position: absolute;
+            white-space: nowrap;
+            transform: translateX(100%);
+            animation: ticker 15s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+    
+    <script>
+        var totalShares = 800000000000000; // 800 trillion shares
+        var aluminumPrice = 1.03; // 98 cents per lb
+
+        // Calculate the total value of shares backed by aluminum
+        var totalValue = totalShares * aluminumPrice;
+
+        // Format the total value with commas
+        var formattedValue = totalValue.toLocaleString();
+
+        // Display the information on the web page
+        function displaySharesInfo() {
+            document.getElementById('shares').textContent = formattedValue;
+            document.getElementById('price').textContent = '$' + aluminumPrice.toFixed(2);
+        }
+    </script>
+</head>
+<body onload="displaySharesInfo()">
+    <div class="container">
+        <h1>AluReserver - Digital Shares</h1>
+        <div class="stock-market">
+            <p><span class="label">Total Shares:</span> <span class="value" id="shares"></span></p>
+            <p><span class="label">Aluminum Price:</span> <span class="value">$<span id="price"></span></span> per lb</p>
+        </div>
+        <img src="image1.jpg" alt="Image Description" style="max-width: 100%;">
+        <br>
+        <br>
+        <img src="3.jpg" alt="Image Description" style="max-width: 100%;">
+        <br>
+        <div class="share-form">
+            <h2>Request Shares</h2>
+            <form action="share_request.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="amount" placeholder="Amount of Shares" required>
+                <input type="submit" value="Submit Request">
+            </form>
+        </div>
+        <p><strong>Welcome to Alureserver - Empowering Digital Shares</strong></p>
+        <p>At Alureserver, we are revolutionizing the world of digital shares and empowering individuals to invest in the future of aluminum. We offer a unique opportunity for investors to participate in the growth and potential of the aluminum market, backed by the solid foundation of 800 trillion digital shares.</p>
+        <p><strong>Who We Are</strong></p>
+        <p>Alureserver is a forward-thinking company that combines cutting-edge technology with a deep understanding of the global aluminum industry. Our team of experts is dedicated to creating a seamless digital investment platform that opens doors to new possibilities and democratizes access to the world of aluminum shares.</p>
+        <p><strong>What We Do</strong></p>
+        <p>At Alureserver, we leverage digital shares to provide an innovative investment solution in the aluminum market. Our digital shares represent ownership in aluminum assets, allowing investors to capitalize on the value and growth of this vital industry.</p>
+        <p>We are committed to transparency and value creation. By backing our digital shares with the inherent value of aluminum, we provide a tangible and reliable asset for our investors. With a current aluminum price of $1.03 per pound, our 800 trillion digital shares represent a formidable opportunity for those seeking to diversify their investment portfolios.</p>
+        <p><strong>How to Invest</strong></p>
+        <p>Investing with Alureserver is straightforward. Simply contact us through the provided email address, bwesson82@gmail.com, to express your interest and receive further information. Our dedicated team will guide you through the investment process and answer any questions you may have.</p>
+        <p><strong>Your Success is Our Priority</strong></p>
+        <p>We are driven by the success and satisfaction of our investors. Alureserver is committed to providing a secure and user-friendly investment platform that ensures a seamless experience. We continuously monitor market trends, leverage advanced analytics, and maintain strong industry partnerships to optimize returns and maximize the value of your investment.</p>
+        <p><strong>Join the Future of Aluminum Investment</strong></p>
+        <p>Invest with Alureserver today and be a part of the future of aluminum. Whether you are an experienced investor or looking to venture into the world of digital shares for the first time, we are here to support you every step of the way.</p>
+        <p>Embrace the power of digital shares and unlock the potential of aluminum investment. Contact us now to start your journey towards a brighter financial future.</p>
+       
+        
+    </div>
+    <script>
+        // Create the stock market ticker element
+        var tickerElement = document.querySelector('.ticker-wrap');
+        var tickerText = tickerElement.getAttribute('data-text');
+        tickerElement.setAttribute('aria-label', tickerText);
+        tickerElement.innerHTML = tickerText;
+    </script>
+</body>
+</html>
