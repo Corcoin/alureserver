@@ -153,10 +153,10 @@
         <br>
         <div class="share-form">
             <h2>Request Shares</h2>
-            <form action="share_request.php" method="post">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="text" name="amount" placeholder="Amount of Shares" required>
+            <form onsubmit="event.preventDefault(); sendEmail();">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="text" id="amount" placeholder="Amount of Shares" required>
                 <input type="submit" value="Submit Request">
             </form>
         </div>
